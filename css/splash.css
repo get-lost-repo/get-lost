@@ -1,5 +1,23 @@
-h1 {
-  font-size: 40px;
-  font-family: 'Permanent Marker', cursive;
+header {
+  background: url(/img/hurricane-ridge.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+  /* max-width: 960px; */
 }
 
+#title {
+  position: absolute;
+  top: 24%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  margin: 20px;
+  font-size: 4rem;
+  white-space: nowrap;
+}
