@@ -1,0 +1,97 @@
+body{
+    width: 960px;
+    background-color: rgba(171, 158, 123, 0.5);  /* 50% transparent */
+}
+
+h1{
+    width: 900px;
+    background-color: #152113;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 60px;
+    color:white;
+    text-align: center;
+    padding:20px;
+    margin: 10px 30px 20px;
+}
+
+#sidenav a {
+    position: fixed; /* Position them relative to the browser window */
+    right: -20px; 
+    transition: 0.3s; /* Add transition on hover */
+    padding: 15px; 
+    width: 40px; 
+    text-decoration: none; 
+    text-align: left;
+    font-size: 20px; 
+    color: #F6F4F3; 
+    border-radius: 2px 0 0 2px; 
+  }
+  
+  #sidenav a:hover {
+    right: 0; /* On mouse-over, make the elements appear as they should */
+  }
+  
+  #burnban {
+    top: 120px;
+    background-color: #546B73;
+    font-family: sans-serif;
+  }
+  
+  #alerts {
+    top: 180px;
+    background-color: #725B36; 
+    font-family: sans-serif;
+  }
+  
+  #emergencyservices {
+    top: 240px;
+    background-color: #152113; 
+  }
+  header img{
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 180px;
+    z-index: -1;
+}
+
+ul{
+    background-color: #ab9e7b;
+    width: 175px;
+    margin: 475px 0px 0px 0px;
+    border:2px;
+    border-style: solid;
+    border-color:#152113;
+}
+
+li{
+    border-bottom: 1px;
+    padding: 10px;
+    border-style: solid;
+    border-color:#152113;
+    font-family: Arial, sans-serif;
+    font-size:  16px;
+    font-weight: bold;
+    color: #152113;
+}
+
+h2{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 35px;
+    color:#152113;
+    width:700px;
+    margin:-120px 0px 00px 250px;
+}
+
+p{
+    widht: 700px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin-left:250px;
+    margin-bottom: 100px;
+}
+
+body img{
+    position: absolute;
+    margin-left: 180px;
+    z-index: -1;
+}
