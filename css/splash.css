@@ -1,58 +1,60 @@
 header {
   background: url(../img/hurricane-ridge.jpg);
-  background-size: contain;
+  max-width:960px;
+  margin:0 auto;
   background-repeat: no-repeat;
-  height: 100vh;
-  /* max-width: 960px; */
-}
-
-#title {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-}
-
-h1 {
-  font-family: 'Permanent Marker', cursive;
-  margin: 20px;
-  font-size: 4rem;
-  white-space: nowrap;
+  height: 300px;
 }
 
 /* Style the links inside the sidenav */
 #sidenav a {
   position: fixed; /* Position them relative to the browser window */
-  left: -20px; 
+  right: -20px; 
   transition: 0.3s; /* Add transition on hover */
   padding: 15px; 
   width: 40px; 
   text-decoration: none; 
-  text-align: right;
+  text-align: left;
   font-size: 20px; 
   color: #F6F4F3; 
-  border-radius: 0 5px 5px 0; 
+  border-radius: 2px 0 0 2px; 
 }
 
 #sidenav a:hover {
-  left: 0; /* On mouse-over, make the elements appear as they should */
+  right: 0; /* On mouse-over, make the elements appear as they should */
 }
 
 #burnban {
-  top: 220px;
+  top: 120px;
   background-color: #546B73;
   font-family: sans-serif;
 }
 
 #alerts {
-  top: 280px;
+  top: 180px;
   background-color: #725B36; 
   font-family: sans-serif;
 }
 
 #emergencyservices {
-  top: 340px;
+  top: 240px;
   background-color: #152113; 
+}
+
+.top-row-images {
+  max-width:960px;
+  margin:0 auto;
+}
+
+.bottom-row-images {
+  max-width:960px;
+  margin:0 auto;
+}
+
+.bottom-row-images li{
+  display: inline;
+}
+
+.top-row-images li {
+  display: inline;
 }
