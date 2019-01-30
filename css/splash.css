@@ -41,11 +41,75 @@ header {
   background-color: #152113; 
 }
 
+.search{
+  background-color: #ab9e7b;
+  color:yellow;
+  padding:5px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 420px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.search:hover {
+  background-color: #152113; /* Green */
+  color: white;
+}
+
+/* HOVER TO TEXT ATTEMPT TOP LEFT IMAGE*/
+
+
+.overlay{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  height: 100%;
+  width: 100;
+  opacity: 0;
+  transition: .5s ease;
+  /* background-color: #546B73; */
+  background-color: rgba(171, 158, 123, .5);
+}
+
+.text{
+  visibility:hidden;
+}
+
+.text{
+  color:white;
+  font-size: 40px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .overlay{
+  /* border-radius: 50%; */
+  opacity:1;
+}
+
+
+
+
+
+/* JON'S WORK */
+
+
+
 ul.top-row-images {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  text-align: center;
+  /* text-align: center; */
 }
 
 ul.bottom-row-images {
@@ -71,7 +135,7 @@ ul.bottom-row-images li {
   width: 300px;
 }
 
-span.text-content {
+/* span.text-content {
   background: rgba(0,0,0,0.5);
   color: white;
   cursor: pointer;
@@ -87,13 +151,13 @@ span.text-content {
 span.text-content span {
   display: table-cell;
   text-align: center;
-  vertical-align: middle;
-}
+  vertical-align: middle; 
+} */
 
-ul.top-row-images li:hover span.text-content {
+/* ul.top-row-images li:hover .text {
   opacity: 1;
-}
+} */
 
-ul.bottom-row-images li:hover span.text-content {
+/* ul.bottom-row-images li:hover span.text-content {
   opacity: 1;
-}
+}  */
