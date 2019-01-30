@@ -61,22 +61,32 @@ new Campground('Klahowya Campground',true,false,true,false,true,true,true,true,f
 new Campground('Sol Duc Campground',true,false,true,false,true,true,false,false,false,false,true,false,true,true,true,false,false,false,false,true,true,false,false,false,false,true,true,false,true,false,false,false,false,'solduc');
 new Campground('Ozette Campground',true,false,true,false,true,true,false,true,false,true,true,true,true,true,true,false,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'ozette');
 new Campground('Glamp Yurt',false,true,false,true,true,true,true,true,true,false,true,true,false,false,true,false,false,false,false,false,false,true,false,true,false,false,false,false,true,false,false,false,false,'yurt');
-new Campground('Mora Campground', true, false, true, false, true, true, true, true, false, true, true, false, true, true, true, false, true, false, true, true, true, false, false, true, true, true, true, false, true, false, false, false, false, 'mora');
+new Campground('Mora Campground',true,false,true,false,true,true,true,true,false,true,true,false,true,true,true,false,true,false,true,true,true,false,false,true,true,true,true,false,true,false,false,false,false,'mora');
 
 selected = campsitesObjects;
 
 function makeList(){
   for( var i = 0; i < selected.length; i++){
-    var namegetter = selected[i]
     var site = document.createElement('li');
-    site.textContent = selected[i].name;
+    var link = document.createElement('a')
+    link.textContent = selected[i].name;
     var img = document.createElement('img')
     img.src = selected[i].imagesquare;
     img.width = '300';
     img.height = '300';
-    site.appendChild(img);
+    // link.setAttribute('href', '../html/campgrounds/'+selected[i].name+'.html')
+    link.setAttribute('href', 'http://www.google.com')
+    link.appendChild(img);
+    site.appendChild(link)
     results.appendChild(site);
+    
   }
 }
 
+// function handleClick(event){
+
+// }
+
+
 makeList();
+// results.addEventListener('click', handleclick);
