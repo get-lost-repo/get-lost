@@ -1,43 +1,99 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Find Your Campground</title>
-    <link rel=“stylesheet” href=“css/reset.css” />
-    <link rel=“stylesheet” href=style.css” />
-    <link rel=“stylesheet” href=style2.css” />
-    <link rel=“stylesheet” href=style3.css” />
-</head>
+    <head>
+        <title>Get Lost!</title>
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/search.css">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    </head>
 
 <body>
     <h1>Find your Campground</h1>
 
-    <div class=" drop-down">
-        <select name="firs-drop">
-            <option value="name1"></option>
-            <option value="name2"></option>
-            <option value="name3"></option>
-        </select>
+    <h2>Pick your bare essentials</h2>
+    
+<!-- FIRST LIST -->
 
-        <select place="firs-drop">
-                <option value="place1"></option>
-                <option value="place2"></option>
-                <option value="place3"></option>
-        </select>
-
-        <select time="firs-drop">
-                <option value="time1"></option>
-                <option value="time2"></option>
-                <option value="time3"></option>
-        </select>
-
-        <select quantity="firs-drop">
-                <option value="quantity1"></option>
-                <option value="quantity2"></option>
-                <option value="quantity3"></option>
-        </select>
-
+     <div class="wrapper" > 
+        <div class="first-drop">
+            <button class="drop-button">Ammenities</button>
+            <div class="drop-ammenities">
+                <ul>
+                    <li>Campsite<input type="checkbox"></li>
+                    <li>RVs<input type="checkbox"></li>
+                    <li>Showers<input type="checkbox"></li>
+                    <li>Pets Allowed<input type="checkbox"></li>
+                    <li>Toilets<input type="checkbox"></li>
+                    <li>Running Water<input type="checkbox"></li>
+                    <li>Campfire<input type="checkbox"></li>
+                    <li>Garbage Cans<input type="checkbox"></li>
+                    <li>Picnic tables<input type="checkbox"></li>
+                </ul>
+            </div>
+        </div>
     </div>
+
+    <!-- SECOND LIST -->
+
+    <div class="wrapper" > 
+            <div class="second-drop">
+                <button class="drop-button">Activities</button>
+                <div class="drop-activities">
+                    <ul>
+                        <li>Hiking<input type="checkbox"></li>
+                        <li>Swimming<input type="checkbox"></li>
+                        <li>Fishing<input type="checkbox"></li>
+                        <li>Paddling<input type="checkbox"></li>
+                        <li>Wildlife<input type="checkbox"></li>
+                        <li>Biking<input type="checkbox"></li>
+                        <li>Boating<input type="checkbox"></li>
+                        <li>White Water<input type="checkbox"></li>
+                        <li>Climbing<input type="checkbox"></li>
+                        <li>Snow Sports<input type="checkbox"></li>
+                        <li>Horseback<input type="checkbox"></li>
+                        <li>Stargazing<input type="checkbox"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- THIRD LIST -->
+
+        <div class="wrapper" > 
+                <div class="third-drop">
+                    <button class="drop-button">Terrain</button>
+                    <div class="drop-terrain">
+                        <ul>
+                            <li>Lake<input type="checkbox"></li>
+                            <li>Beach<input type="checkbox"></li>
+                            <li>River/Stream<input type="checkbox"></li>
+                            <li>Hot Spring<input type="checkbox"></li>
+                            <li>Swimming Hole<input type="checkbox"></li>
+                            <li>Caves<input type="checkbox"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4TH LIST -->
+
+
+            <div class="wrapper" > 
+                    <div class="fourth-drop">
+                        <button class="drop-button">Access</button>
+                        <div class="drop-access">
+                            <ul>
+                                <li>Parking<input type="checkbox"></li>
+                                <li>Walk to<input type="checkbox"></li>
+                                <li>Boat Access<input type="checkbox"></li>
+                                <li>Equestrian Access<input type="checkbox"></li>
+                                <li>Wheelchair access<input type="checkbox"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
     <ul id="camp-list"></ul>
 
@@ -45,8 +101,5 @@
 
 
 </body>
-
-
-
 
 </html>
