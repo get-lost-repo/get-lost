@@ -2,7 +2,48 @@
 
 var campsitesObjects = [];
 var selected = [];
-var results = document.getElementById('camp-list')
+var clicked = [];
+
+var results = document.getElementById('camp-list');
+var options = document.getElementById('all-lists');
+
+var campsites = document.getElementById('campsites');
+var structures = document.getElementById('structures');
+var rvs = document.getElementById('rvs');
+var showers = document.getElementById('showers');
+var pets = document.getElementById('pets');
+var toilets = document.getElementById('toilets');
+var water = document.getElementById('water');
+var fire = document.getElementById('campfire');
+var trash = document.getElementById('garbage');
+var picnicTables = document.getElementById('picnicTables');
+var hiking = document.getElementById('hiking');
+var swimming = document.getElementById('swimming');
+var fishing = document.getElementById('fishing');
+var paddling = document.getElementById('paddling');
+var wildlife = document.getElementById('wildlife');
+var biking = document.getElementById('biking');
+var boating = document.getElementById('boating');
+var whiteWater = document.getElementById('whiteWater');
+var climbing = document.getElementById('climbing');
+var snowSports = document.getElementById('snowSports');
+var horseback = document.getElementById('horseback');
+var stargazing = document.getElementById('stargazing');
+var lake = document.getElementById('lake');
+var beach = document.getElementById('beach');
+var river = document.getElementById('river');
+var hotspring = document.getElementById('hotspring');
+var swimmingHole = document.getElementById('swimmingHole');
+var caves = document.getElementById('caves');
+var parkAt = document.getElementById('parkAt');
+var walkTo = document.getElementById('walkTo');
+var boatAccess = document.getElementById('boatAccess');
+var equestrianAccess = document.getElementById('equestrianAccess');
+var wheelchairAccess = document.getElementById('wheelchairAccess');
+
+
+var categories = [campsites, structures, rvs, showers, pets, toilets, water, fire, trash, picnicTables, hiking, swimming, fishing, paddling, wildlife, biking, boating, whiteWater, climbing, snowSports, horseback, stargazing, lake, beach, river, hotspring, swimmingHole, caves, parkAt, walkTo, boatAccess, equestrianAccess, wheelchairAccess]
+
 
 function Campground(name, campsites, structures, rvs, showers, pets, toilets, water, fire, trash, picnicTables, hiking, swimming, fishing, paddling, wildlife, biking, boating, whitewater, climbing, snowsports, horseback, stargazing, lake, beach, river, hotspring, swimmingHole, caves, parkAt, walkTo, boatAccess, equestrianAccess, wheelchairAccess, image){
   this.name = name;
@@ -13,8 +54,8 @@ function Campground(name, campsites, structures, rvs, showers, pets, toilets, wa
   this.pets = pets;
   this.toilets = toilets;
   this.water = water;
-  this.fire = fire;
-  this.trash = trash;
+  this.campfire = fire;
+  this.garbage = trash;
   this.picnicTables = picnicTables;
   this.hiking = hiking;
   this.swimming = swimming;
@@ -23,9 +64,9 @@ function Campground(name, campsites, structures, rvs, showers, pets, toilets, wa
   this.wildlife = wildlife;
   this.biking = biking;
   this.boating = boating;
-  this.whitewater = whitewater;
+  this.whiteWater = whitewater;
   this.climbing = climbing;
-  this.snowsports = snowsports;
+  this.snowSports = snowsports;
   this.horseback = horseback;
   this.stargazing = stargazing;
   this.lake = lake;
@@ -83,10 +124,37 @@ function makeList(){
   }
 }
 
-// function handleClick(event){
+function makeClickList(){
+  for (var j = 0; j<categories.length; j++){
+    if(categories[j].checked === true){
+      clicked.push(categories[j].id)
+    }
+  }
+}
 
-// }
+function removeClickedFromSelected(){
+  for (var k = 0; k<selected.length; k++){
+    for (var m = 0; m<clicked.length; m++){
+      console.log(selected[k][clicked[m]]);
+      if (selected[k][clicked[m]] === false){
+        selected.splice(k,1)
+      }
+    }
+  }
+}
 
+function handleClick(event){
+  clicked=[];
+  selected = campsitesObjects;
+  makeClickList();
+  removeClickedFromSelected();
+  results.textContent = '';
+  makeList();
+  
+    // console.log(categories[j].id, categories[j].value, categories[j].checked)
+}
 
 makeList();
-// results.addEventListener('click', handleclick);
+options.addEventListener('click', handleClick);
+
+
