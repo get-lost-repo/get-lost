@@ -1,0 +1,99 @@
+header {
+  background: url(../img/hurricane-ridge.jpg);
+  max-width:960px;
+  margin:0 auto;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+
+/* Style the links inside the sidenav */
+#sidenav a {
+  position: fixed; /* Position them relative to the browser window */
+  right: -20px; 
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; 
+  width: 40px; 
+  text-decoration: none; 
+  text-align: left;
+  font-size: 20px; 
+  color: #F6F4F3; 
+  border-radius: 2px 0 0 2px; 
+}
+
+#sidenav a:hover {
+  right: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+#burnban {
+  top: 120px;
+  background-color: #546B73;
+  font-family: sans-serif;
+}
+
+#alerts {
+  top: 180px;
+  background-color: #725B36; 
+  font-family: sans-serif;
+}
+
+#emergencyservices {
+  top: 240px;
+  background-color: #152113; 
+}
+
+ul.top-row-images {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul.bottom-row-images {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul.top-row-images li {
+  display: inline-block;
+  height: 300px;
+  margin: 0 1em 1em 0;
+  position: relative;
+  width: 300px;
+}
+
+ul.bottom-row-images li {
+  display: inline-block;
+  height: 300px;
+  margin: 0 1em 1em 0;
+  position: relative;
+  width: 300px;
+}
+
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 300px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 300px;
+  opacity: 0;
+}
+
+span.text-content span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+ul.top-row-images li:hover span.text-content {
+  opacity: 1;
+}
+
+ul.bottom-row-images li:hover span.text-content {
+  opacity: 1;
+}
