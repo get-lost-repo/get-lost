@@ -1,99 +1,102 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>Get Lost!</title>
-        <link rel="stylesheet" href="../css/reset.css">
-        <link rel="stylesheet" href="../css/search.css">
-        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
-    </head>
+<head>
+    <title>Get Lost!</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+</head>
+
+<header>
+
+    <div id="sidenav" clas="Sidenav">
+        <a href="https://parks.state.wa.us/DocumentCenter/View/5654/Statewide-Burn-Ban" id="burnban">&#128293;</a>
+        <a href=“https://parks.state.wa.us/alertcenter.aspx” id="alerts">&#9888;</a>
+        <a href=“link toemergency services here” id="emergencyservices">&#128680;</a>
+    </div>
+
+</header>
 
 <body>
     <h1>Find your Campground</h1>
 
     <h2>Pick your bare essentials</h2>
-    
-<!-- FIRST LIST -->
 
-     <div class="wrapper" > 
+    <div id="all-lists">
+        <!--OPENNING DIV FOR FIXED POSITION-->
+
+        <!-- FIRST LIST -->
+
+        <button class="accordion">Ammenities</button>
+        <div class="panel">
             <ul>
-                <li class="dropdown">
-                    <input type="checkbox">
-                    <a href="#" data-toggle="dropdown">Ammenities</a>
-                    <ul class="dropdown-menu">
-                        <li>Campsite<input type="checkbox"></li>
-                        <li>RVs<input type="checkbox"></li>
-                        <li>Showers<input type="checkbox"></li>
-                        <li>Pets Allowed<input type="checkbox"></li>
-                        <li>Toilets<input type="checkbox"></li>
-                        <li>Running Water<input type="checkbox"></li>
-                        <li>Campfire<input type="checkbox"></li>
-                        <li>Garbage Cans<input type="checkbox"></li>
-                        <li>Picnic tables<input type="checkbox"></li>
-                    </ul>
-                </li>
-            
-<!-- SECOND LIST -->
+                <li>Campsite<input type="checkbox"></li>
+                <li>RVs<input type="checkbox"></li>
+                <li>Showers<input type="checkbox"></li>
+                <li>Pets Allowed<input type="checkbox"></li>
+                <li>Toilets<input type="checkbox"></li>
+                <li>Running Water<input type="checkbox"></li>
+                <li>Campfire<input type="checkbox"></li>
+                <li>Garbage Cans<input type="checkbox"></li>
+                <li>Picnic tables<input type="checkbox"></li>
+            </ul>
+        </div>
 
-            <li class="dropdown">
-                <input type="checkbox">
-                <a href="#" data-toggle="dropdown">Activities</a>
-                <ul class="dropdown-menu">
-                    <li>Hiking<input type="checkbox"></li>
-                    <li>Swimming<input type="checkbox"></li>
-                    <li>Fishing<input type="checkbox"></li>
-                    <li>Paddling<input type="checkbox"></li>
-                    <li>Wildlife<input type="checkbox"></li>
-                    <li>Biking<input type="checkbox"></li>
-                    <li>Boating<input type="checkbox"></li>
-                    <li>White Water<input type="checkbox"></li>
-                    <li>Climbing<input type="checkbox"></li>
-                    <li>Snow Sports<input type="checkbox"></li>
-                    <li>Horseback<input type="checkbox"></li>
-                    <li>Stargazing<input type="checkbox"></li>
-                </ul>
-            </li>
-       
-<!-- THIRD LIST -->
+        <!-- SECOND LIST -->
 
-            <li class="dropdown">
-                <input type="checkbox">
-                <a href="#" data-toggle="dropdown">Terrain</a>
-                <ul class="dropdown-menu">
-                    <li>Lake<input type="checkbox"></li>
-                    <li>Beach<input type="checkbox"></li>
-                    <li>River/Stream<input type="checkbox"></li>
-                    <li>Hot Spring<input type="checkbox"></li>
-                    <li>Swimming Hole<input type="checkbox"></li>
-                    <li>Caves<input type="checkbox"></li>
-                </ul>
-            </li>
+        <button class="accordion">Activities</button>
+        <div class="panel">
+            <ul>
+                <li>Campsite<input type="checkbox"></li>
+                <li>RVs<input type="checkbox"></li>
+                <li>Showers<input type="checkbox"></li>
+                <li>Pets Allowed<input type="checkbox"></li>
+                <li>Toilets<input type="checkbox"></li>
+                <li>Running Water<input type="checkbox"></li>
+                <li>Campfire<input type="checkbox"></li>
+                <li>Garbage Cans<input type="checkbox"></li>
+                <li>Picnic tables<input type="checkbox"></li>
+            </ul>
+        </div>
 
-<!-- 4TH LIST -->
+        <!-- THIRD LIST -->
 
-            <li class="dropdown">
-                <input type="checkbox">
-                <a href="#" data-toggle="dropdown">Access</a>
-                <ul class="dropdown-menu">
-                    <li>Parking<input type="checkbox"></li>
-                    <li>Walk to<input type="checkbox"></li>
-                    <li>Boat Access<input type="checkbox"></li>
-                    <li>Equestrian Access<input type="checkbox"></li>
-                    <li>Wheelchair access<input type="checkbox"></li>
-                </ul>
-            </li>
-        </ul>
-    </div>  <!--CLOSES DIV WRAPPER-->
+        <button class="accordion">Terrain</button>
+        <div class="panel">
+            <ul>
+                <li>Lake<input type="checkbox"></li>
+                <li>Beach<input type="checkbox"></li>
+                <li>River/Stream<input type="checkbox"></li>
+                <li>Hot Spring<input type="checkbox"></li>
+                <li>Swimming Hole<input type="checkbox"></li>
+                <li>Caves<input type="checkbox"></li>
+            </ul>
+        </div>
 
-        
-</body>
+        <!-- FOURTH LIST -->
 
-<script src='../js/app.js'></script>
+        <button class="accordion">Access</button>
+        <div class="panel">
+            <ul>
+                <li>Parking<input type="checkbox"></li>
+                <li>Walk to<input type="checkbox"></li>
+                <li>Boat Access<input type="checkbox"></li>
+                <li>Equestrian Access<input type="checkbox"></li>
+                <li>Wheelchair access<input type="checkbox"></li>
+            </ul>
+        </div>
+    </div>
+    <!--ID CLOSING DIV  FOR FIXED POSITION-->
+
+
+    <script src='../js/search.js'></script>
+    <script src='../js/app.js'></script>
 
     <ul id="camp-list"></ul>
 
-    <aside>img src="map" alt="map of Camp"</aside>
+    <aside><img src="https://placehold.it/300x375/000" alt="logo" title="logo" /></aside>
 
 </body>
 
