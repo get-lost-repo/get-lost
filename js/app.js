@@ -95,8 +95,8 @@ new Campground('Brown Creek Campground',true,false,true,false,true,true,true,fal
 new Campground('Elkhorn Dispersed Camping Area',true,false,false,false,true,false,false,true,false,true,true,true,true,true,true,true,true,false,true,true,true,false,false,false,true,true,true,false,false,true,false,false,false,'elkhorn');
 new Campground('Interrorem Cabin',true,true,false,false,true,true,true,true,false,false,true,true,true,true,true,true,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'interrorem');
 new Campground('Camp Epona',true,true,true,false,true,true,true,true,true,false,true,true,true,true,true,true,true,false,false,false,true,false,true,true,true,true,true,false,true,false,false,true,false,'epona');
-new Campground('Olympic Lowlands Forest Sanctuary',true,false,false,false,false,false,true,true,false,true,true,false,false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,'olympic');
-new Campground('1936 Highliner Bus',false,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,false,true,false,false,false,false,false,false,false,true,false,false,false,true,'bus');
+new Campground('Olympic Lowlands Forest Sanctuary',true,false,false,false,false,false,true,true,false,true,true,false,false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,'lowlands');
+new Campground('1963 Highliner Bus',false,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,false,true,false,false,false,false,false,false,false,true,false,false,false,true,'bus');
 new Campground('The Cute Nest Camper',false,true,false,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,false,false,false,true,true,false,false,false,false,true,false,false,false,false,'camper');
 new Campground('Klahowya Campground',true,false,true,false,true,true,true,true,false,true,true,true,true,true,true,true,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'klahowya');
 new Campground('Sol Duc Campground',true,false,true,false,true,true,false,false,false,false,true,false,true,true,true,false,false,false,false,true,true,false,false,false,false,true,true,false,true,false,false,false,false,'solduc');
@@ -104,7 +104,7 @@ new Campground('Ozette Campground',true,false,true,false,true,true,false,true,fa
 new Campground('Glamp Yurt',false,true,false,true,true,true,true,true,true,false,true,true,false,false,true,false,false,false,false,false,false,true,false,true,false,false,false,false,true,false,false,false,false,'yurt');
 new Campground('Mora Campground',true,false,true,false,true,true,true,true,false,true,true,false,true,true,true,false,true,false,true,true,true,false,false,true,true,true,true,false,true,false,false,false,false,'mora');
 
-selected = campsitesObjects;
+selected = campsitesObjects.slice(0);
 
 function makeList(){
   for( var i = 0; i < selected.length; i++){
@@ -133,11 +133,11 @@ function makeClickList(){
 }
 
 function removeClickedFromSelected(){
-  for (var k = 0; k<selected.length; k++){
-    for (var m = 0; m<clicked.length; m++){
-      console.log(selected[k][clicked[m]]);
-      if (selected[k][clicked[m]] === false){
-        selected.splice(k,1)
+  for (var k = 0; k<clicked.length; k++){
+    for (var m = 0; m<selected.length; m++){
+      if (selected[m][clicked[k]] === false){
+        console.log(clicked);
+        selected.splice(m,1)
       }
     }
   }
@@ -145,13 +145,12 @@ function removeClickedFromSelected(){
 
 function handleClick(event){
   clicked=[];
-  selected = campsitesObjects;
+  selected = campsitesObjects.slice(0);
+  console.log(campsitesObjects);
   makeClickList();
   removeClickedFromSelected();
   results.textContent = '';
   makeList();
-  
-    // console.log(categories[j].id, categories[j].value, categories[j].checked)
 }
 
 makeList();
