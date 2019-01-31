@@ -24,7 +24,13 @@ Comment.prototype.render = function() {
 };
 
 var dataBack = JSON.parse(localStorage.getItem('belfairCommentsStringified'));
-
+var reversedDataBack = []
+function reverse(){
+  for(var i = 0; i<dataBack.length; i++){
+    reversedDataBack.unshift(dataBack[i])
+  }
+}
+reverse();
 // ***********************************************************************
 // GETS THE DATA BACK FROM LOCAL STORAGE AND THEN RUNS THROUGH CONSTRUCTOR
 // ***********************************************************************
@@ -32,7 +38,7 @@ if (! dataBack) {
   console.log('no comments to render');
 } else {
   for (var i=0; i < dataBack.length; i++){
-    new Comment(dataBack[i].userName, dataBack[i].text);
+    new Comment(reversedDataBack[i].userName, reversedDataBack[i].text);
   }
   // belfairComments = dataBack;
   renderAllComments();
