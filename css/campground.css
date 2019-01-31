@@ -1,6 +1,5 @@
 body{
     width: 960px;
-    background-color: rgba(171, 158, 123, 0.5);  /* 50% transparent */
 }
 
 h1{
@@ -11,7 +10,7 @@ h1{
     color:white;
     text-align: center;
     padding:20px;
-    margin: 10px 30px 20px;
+    margin: 10px 30px 20px; 
 }
 
 #sidenav a {
@@ -47,8 +46,8 @@ h1{
     top: 240px;
     background-color: #152113; 
   }
+
   header img{
-    border-radius: 50%;
     position: absolute;
     margin-left: 180px;
     margin-bottom: 50px;
@@ -91,8 +90,47 @@ p{
     margin-bottom: 100px;
 }
 
-body img{
-    position: absolute;
+img{
+    /* position: absolute; */
     margin-left: 180px;
     z-index: -1;
 }
+
+#comment-list {
+    display: inline;
+}
+
+#links {
+    display: inline-block;
+}
+
+/* input[type=text], select {
+    width: 100%
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%
+    background-color: white;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer
+}
+
+input[type=submit]:hover {
+    background-color: #4fa049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+} */
