@@ -45,16 +45,17 @@ header {
 }
 
 /* ***********   search bar *******************/
-.search{
+.search {
   background-color: #ab9e7b;
+  font-size: 16px; 
   padding:5px;
   border: none;
-  text-align: center;
-  text-decoration: none;
+
+  position: relative;
+  left: 50%;
+  margin-left: -62px;
   display: inline-block;
-  margin-left: 420px;
   margin-bottom: 20px;
-  font-size: 16px;
 }
 
 .search:hover {
@@ -95,7 +96,7 @@ ul.bottom-row-images li {
 }
 
 
-/* HOVER TO TEXT ATTEMPT TOP LEFT IMAGE*/
+/* HOVER TO SHOW CATEGORY NAMES */
 
 .img-text {
   position: absolute;
@@ -119,6 +120,27 @@ ul.bottom-row-images li {
   visibility: visible;
   opacity: 1;
 } 
+
+/* FOOTER */
+
+footer {
+  max-width:960px;
+  margin:0 auto;
+  height: 300px;
+}
+
+#footer {
+  text-align: center;
+}
+
+.footer-links li{
+  display: inline-block;
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 
 
 
