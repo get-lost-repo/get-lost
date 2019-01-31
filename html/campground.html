@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Get Lost!</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/campground.css">
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
-</head>
-<header>
-    <h1>Your Campground</h1>
-    <div id="sidenav" clas="Sidenav">
-        <a href="https://parks.state.wa.us/DocumentCenter/View/5654/Statewide-Burn-Ban" id="burnban">&#128293;</a>
-        <a href="https://parks.state.wa.us/alertcenter.aspx" id="alerts">&#9888;</a>
-        <a href="link toemergency services here" id="emergencyservices">&#128680;</a>
-    </div>
-    <img src="../img/Belfair Main Loop Campground/low-Tide-at-Belfair-State-Park.jpg" alt="Low Tide" title="Low Tide">
-</header>
+  <head>
+      <title>Get Lost!</title>
+      <link rel="stylesheet" href="../css/reset.css">
+      <link rel="stylesheet" href="../css/campground.css">
+      <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+  </head>
 
-<body>
+  <body>
+    <header>
+        <h1>Your Campground</h1>
+        <div id="sidenav" clas="Sidenav">
+            <a href="https://parks.state.wa.us/DocumentCenter/View/5654/Statewide-Burn-Ban" id="burnban">&#128293;</a>
+            <a href="https://parks.state.wa.us/alertcenter.aspx" id="alerts">&#9888;</a>
+            <a href="link toemergency services here" id="emergencyservices">&#128680;</a>
+        </div>
+        <img src="../img/Belfair Main Loop Campground/belfair300.jpg"alt="Low Tide" title="Low Tide">
+    </header>
 
+    <main>
 
-    <ul>
-        <li><a href=“https://park-Info”> Park Info</a></li>
-        <li><a href=“https://park-ammenitites”>Park ammenitites</a></li>
-        <li><a href=“https://park-what?”> What here?</a></li>
-    </ul>
+      <ul>
+          <li><a href=“https://park-Info”> Park Info</a></li>
+          <li><a href=“https://park-ammenitites”>Park ammenitites</a></li>
+          <li><a href=“https://park-what?”> What here?</a></li>
+      </ul>
 
-    <h2>Your Campground</h2>
-    <p>This is the place where the indivudual information will go for each park.</p>
-    <img src="https://placehold.it/600x400/000" alt="logo" title="logo" />
-</body>
+      <h2>Your Campground</h2>
+      <p>This is the place where the indivudual information will go for each park.</p>
+      <img src="https://placehold.it/600x400/000" alt="logo" title="logo" />
 
+      <form id="comment-form">
+        <fieldset>
+          <legend>Leave A Comment</legend>
 
+          <label for="who">Name</label>
+          <input name="who" type="text" size="16" placeholder="Your name..."/>
 
+          <label for="says">Comment:</label>
+          <input name="says" type="text" style="height:400px" />
+
+          <button type="submit">Submit a comment!</button>
+        </fieldset>
+      </form>
+
+      <ul id="comment-list"></ul>
+
+      <script src="../js/belfair.js"></script>
+    </main>
+  </body>
 </html>
