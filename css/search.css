@@ -1,7 +1,7 @@
 
-  body{
+  /* body{
       background-color: rgba(171, 158, 123, .5);
-  }
+  } */
   /* Style the links inside the sidenav */
   #sidenav a {
     position: fixed; /* Position them relative to the browser window */
@@ -71,6 +71,7 @@ THE DROP DOWN LISTS START */
 /* FIRST LIST */
 
 .accordion{
+    z-index: 1;
     display: block;
     font-family: Arial, sans-serif;
     font-weight: bold;
@@ -79,7 +80,7 @@ THE DROP DOWN LISTS START */
     color:#f6f4f3;
     cursor:pointer;
     padding: 5px;
-    width: 180px;;
+    width: 200px;;
     text-align: center;
     border:none;
     outline:none;
@@ -91,7 +92,7 @@ THE DROP DOWN LISTS START */
 }
 
 .panel{
-    width: 160px;
+    width: 180px;
     padding: 0 10px;
     background-color:#f6f4f3;
     display:none;
@@ -105,15 +106,25 @@ li{
     padding:5px;
 }
 
-aside{
+#map{
     display: block;
     position: fixed;
     right:50px;
     z-index:-1;
 }
 
-#camp-list {
+.campgrounds{
     float: right;
+    margin-right:525px;
+    overflow: auto;
+    width: 400px;
+    position: relative;
+    z-index: -1;
 }
 
-
+.campgrounds li{
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
