@@ -1,6 +1,5 @@
 body{
     width: 960px;
-    background-color: rgba(171, 158, 123, 0.5);  /* 50% transparent */
 }
 
 h1{
@@ -11,7 +10,7 @@ h1{
     color:white;
     text-align: center;
     padding:20px;
-    margin: 10px 30px 20px;
+    margin: 10px 30px 20px; 
 }
 
 #sidenav a {
@@ -47,8 +46,8 @@ h1{
     top: 240px;
     background-color: #152113; 
   }
+
   header img{
-    border-radius: 50%;
     position: absolute;
     margin-left: 180px;
     margin-bottom: 50px;
@@ -84,15 +83,28 @@ h2{
 }
 
 p{
-    widht: 700px;
+    width: 700px;
     font-family: Arial, sans-serif;
     font-size: 14px;
     margin-left:250px;
     margin-bottom: 100px;
 }
 
-body img{
-    position: absolute;
+img{
+    /* position: absolute; */
     margin-left: 180px;
     z-index: -1;
 }
+
+#comment-list {
+    display: inline;
+    max-width: 90px;
+    /* text-align: center; */
+    border: 0px none;
+
+}
+
+#links {
+    display: inline-block;
+}
+
