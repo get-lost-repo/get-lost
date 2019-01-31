@@ -110,6 +110,7 @@ selected = campsitesObjects.slice(0);
 function makeList(){
   for( var i = 0; i < selected.length; i++){
     var site = document.createElement('li');
+    site.className = 'card';
     var link = document.createElement('a')
     link.textContent = selected[i].name;
     var img = document.createElement('img')
