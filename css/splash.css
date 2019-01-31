@@ -1,3 +1,5 @@
+/* header*/
+
 header {
   background: url(../img/hurricane-ridge.jpg);
   max-width:960px;
@@ -5,6 +7,7 @@ header {
   background-repeat: no-repeat;
   height: 300px;
 }
+
 
 /* Style the links inside the sidenav */
 #sidenav a {
@@ -41,17 +44,18 @@ header {
   background-color: #152113; 
 }
 
-.search{
+/* ***********   search bar *******************/
+.search {
   background-color: #ab9e7b;
-  color:yellow;
+  font-size: 16px; 
   padding:5px;
   border: none;
-  text-align: center;
-  text-decoration: none;
+
+  position: relative;
+  left: 50%;
+  margin-left: -62px;
   display: inline-block;
-  margin-left: 420px;
   margin-bottom: 20px;
-  font-size: 16px;
 }
 
 .search:hover {
@@ -59,57 +63,13 @@ header {
   color: white;
 }
 
-/* HOVER TO TEXT ATTEMPT TOP LEFT IMAGE*/
-
-
-.overlay{
-  position:absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  height: 100%;
-  width: 100;
-  opacity: 0;
-  transition: .5s ease;
-  /* background-color: #546B73; */
-  background-color: rgba(171, 158, 123, .5);
-}
-
-.text{
-  visibility:hidden;
-}
-
-.text{
-  color:white;
-  font-size: 40px;
-  position: absolute;
-  top:50%;
-  left:50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.container:hover .overlay{
-  /* border-radius: 50%; */
-  opacity:1;
-}
-
-
-
-
-
-/* JON'S WORK */
-
-
+/*************  CENTER IMAGES ******************/
 
 ul.top-row-images {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  /* text-align: center; */
+  text-align: center;
 }
 
 ul.bottom-row-images {
@@ -135,29 +95,52 @@ ul.bottom-row-images li {
   width: 300px;
 }
 
-/* span.text-content {
-  background: rgba(0,0,0,0.5);
-  color: white;
-  cursor: pointer;
-  display: table;
-  height: 300px;
-  left: 0;
+
+/* HOVER TO SHOW CATEGORY NAMES */
+
+.img-text {
   position: absolute;
   top: 0;
-  width: 300px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #725B36;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 40px;
+  color: white;
+  visibility: hidden;
   opacity: 0;
+  padding-top: 140px; 
+
+  /* transition effect, not necessary */
+  transition: opacity .5s, visibility .5s;
 }
 
-span.text-content span {
-  display: table-cell;
+.container:hover .img-text {
+  visibility: visible;
+  opacity: 1;
+} 
+
+/* FOOTER */
+
+footer {
+  max-width:960px;
+  margin:0 auto;
+  height: 300px;
+}
+
+#footer {
   text-align: center;
-  vertical-align: middle; 
-} */
+}
 
-/* ul.top-row-images li:hover .text {
-  opacity: 1;
-} */
+.footer-links li{
+  display: inline-block;
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-/* ul.bottom-row-images li:hover span.text-content {
-  opacity: 1;
-}  */
+
+
+
