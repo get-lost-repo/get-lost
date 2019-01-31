@@ -3,6 +3,7 @@
 var campsitesObjects = [];
 var selected = [];
 var clicked = [];
+var toStorage = [];
 
 var results = document.getElementById('camp-list');
 var options = document.getElementById('all-lists');
@@ -136,24 +137,45 @@ function removeClickedFromSelected(){
   for (var k = 0; k<clicked.length; k++){
     for (var m = 0; m<selected.length; m++){
       if (selected[m][clicked[k]] === false){
-        console.log(clicked);
         selected.splice(m,1)
       }
     }
   }
 }
+function save(){
+  for (var n = 0; n<categories.length; n++){
+  toStorage.push(categories[n].checked)  
+  }
+  var stringToStorage = JSON.stringify(toStorage);
+  localStorage.setItem('checkedKey', stringToStorage);
+}
+
+
+
+function load(){
+  if (localStorage.checkedKey){
+    var getFromLocal = localStorage.getItem('checkedKey');
+    var isChecked = JSON.parse(getFromLocal);
+    for (var o = 0; o<categories.length; o++){
+      categories[o].checked = isChecked[o]
+    }
+  }
+}
+
 
 function handleClick(event){
   clicked=[];
   selected = campsitesObjects.slice(0);
-  console.log(campsitesObjects);
   makeClickList();
   removeClickedFromSelected();
   results.textContent = '';
   makeList();
+  toStorage = [];
+  save();
 }
 
+load();
+makeClickList();
+removeClickedFromSelected();
 makeList();
 options.addEventListener('click', handleClick);
-
-
