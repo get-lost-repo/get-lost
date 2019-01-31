@@ -2,7 +2,7 @@
 
 var categories = document.getElementById('categories');
 var dayHiking = [false,false,false,false,false,false,false,false,false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,]
-var glamping = []
+var paddling = [false,false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,]
 var climbing = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,]
 var beach = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false,false,false,false,false,false,]
 var fishing = [false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,]
@@ -13,9 +13,9 @@ function handleClick(event){
     var stringifieddayHiking = JSON.stringify(dayHiking);
     localStorage.setItem('checkedKey', stringifieddayHiking)
   }
-  if (event.target.id === 'glamping'){
-    var stringifiedglamping = JSON.stringify(glamping);
-    localStorage.setItem('checkedKey', stringifiedglamping)
+  if (event.target.id === 'paddling'){
+    var stringifiedglamping = JSON.stringify(paddling);
+    localStorage.setItem('checkedKey', stringifiedpaddling)
   }
   if (event.target.id === 'climbing'){
     var stringifiedclimbing = JSON.stringify(climbing);
