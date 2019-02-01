@@ -125,7 +125,7 @@ li{
 }
 
 .campgrounds{
-    float: right;
+    float: left;
     margin-right:400px;
     overflow: hidden;
     width: 600px;
@@ -134,6 +134,11 @@ li{
     z-index: -1;
 }
 
+.campcontainer{
+  clear: both;
+  width: 600px;
+  margin-left: 34%;
+}
 .campgrounds li{
     text-align: center;
     font-family: Arial, sans-serif;
