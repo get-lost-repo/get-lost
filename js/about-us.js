@@ -2,7 +2,7 @@
 
 function toggle_visibility(jon) {
        var jon = document.getElementById(jon);
-       if(jon.style.display == 'block')
+       if(jon.style.display =='block')
           jon.style.display = 'none';
        else
           jon.style.display = 'block';
