@@ -18,16 +18,20 @@ h2{
     margin-bottom: 40px;
 }
 
+img{
+    width:250px;
+    height: 333;
+}
 
 
 #jon{
     display: none;
     max-width: 250px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 button{
-    margin-left: 10px;
+    margin-left: 20px;
     width: 250px;
     background-color: #152113;
     font-size:20px;
@@ -37,4 +41,29 @@ button{
     padding: 10px;
     text-align: center;
     cursor:pointer;
+}
+
+p{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: justify;
+    width:240px;
+}
+
+.morton{
+    margin-left:150px;
+}
+#chris{
+    display: none;
+    max-width: 125px;
+    margin-left: 275px;
+}
+
+.carranza{
+    margin-left:750px;
+}
+#marino{
+    display: none;
+    max-width: 125px;
+    margin-left: 00px;
 }
