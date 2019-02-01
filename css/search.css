@@ -197,3 +197,8 @@ li{
     position: absolute;
     top: 0;
   }
+
+  .camp-pic {
+    height: 450px;
+    width: 450px;
+  }
