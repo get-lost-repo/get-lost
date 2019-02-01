@@ -110,21 +110,57 @@ selected = campsitesObjects.slice(0);
 function makeList(){
   for( var i = 0; i < selected.length; i++){
     var site = document.createElement('li');
-    site.className = 'card';
+    site.className = 'mySlides fade';
     var link = document.createElement('a')
-    link.textContent = selected[i].name;
+    var caption = document.createElement('div')
+    caption.className = 'text'
+    caption.textContent = selected[i].name;
     var img = document.createElement('img')
     img.src = selected[i].imagesquare;
-    img.width = '300';
-    img.height = '300';
+    var numbers = document.createElement('div')
+    numbers.className = 'numbertext'
+    numbers.textContent = [i+1]+'/'+selected.length
+    img.width = '600';
+    img.height = '600';
     // link.setAttribute('href', '../html/campgrounds/'+selected[i].name+'.html')
     link.setAttribute('href', 'http://www.google.com')
     link.appendChild(img);
+    link.appendChild(caption);
+    link.appendChild(numbers)
     site.appendChild(link)
     results.appendChild(site);
     
   }
 }
+
+
+var slideIndex = 1;
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+var slides = document.getElementsByClassName("mySlides");
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  // var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  // for (i = 0; i < dots.length; i++) {
+  //     dots[i].className = dots[i].className.replace(" active", "");
+  // }
+  slides[slideIndex-1].style.display = "block";  
+  // dots[slideIndex-1].className += " active";
+}
+
 
 function makeClickList(){
   for (var j = 0; j<categories.length; j++){
@@ -171,6 +207,7 @@ function handleClick(event){
   removeClickedFromSelected();
   results.textContent = '';
   makeList();
+  showSlides(slideIndex);
   toStorage = [];
   save();
 }
@@ -179,4 +216,5 @@ load();
 makeClickList();
 removeClickedFromSelected();
 makeList();
+showSlides(slideIndex);
 options.addEventListener('click', handleClick);

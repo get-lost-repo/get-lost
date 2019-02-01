@@ -14,7 +14,7 @@ function handleClick(event){
     localStorage.setItem('checkedKey', stringifieddayHiking)
   }
   if (event.target.id === 'paddling'){
-    var stringifiedglamping = JSON.stringify(paddling);
+    var stringifiedpaddling = JSON.stringify(paddling);
     localStorage.setItem('checkedKey', stringifiedpaddling)
   }
   if (event.target.id === 'climbing'){
