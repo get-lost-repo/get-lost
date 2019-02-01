@@ -46,7 +46,7 @@ var wheelchairAccess = document.getElementById('wheelchairAccess');
 var categories = [campsites, structures, rvs, showers, pets, toilets, water, fire, trash, picnicTables, hiking, swimming, fishing, paddling, wildlife, biking, boating, whiteWater, climbing, snowSports, horseback, stargazing, lake, beach, river, hotspring, swimmingHole, caves, parkAt, walkTo, boatAccess, equestrianAccess, wheelchairAccess]
 
 
-function Campground(name, campsites, structures, rvs, showers, pets, toilets, water, fire, trash, picnicTables, hiking, swimming, fishing, paddling, wildlife, biking, boating, whitewater, climbing, snowsports, horseback, stargazing, lake, beach, river, hotspring, swimmingHole, caves, parkAt, walkTo, boatAccess, equestrianAccess, wheelchairAccess, image){
+function Campground(name, campsites, structures, rvs, showers, pets, toilets, water, fire, trash, picnicTables, hiking, swimming, fishing, paddling, wildlife, biking, boating, whitewater, climbing, snowsports, horseback, stargazing, lake, beach, river, hotspring, swimmingHole, caves, parkAt, walkTo, boatAccess, equestrianAccess, wheelchairAccess, image, site){
   this.name = name;
   this.campsites = campsites;
   this.structures = structures;
@@ -82,28 +82,29 @@ function Campground(name, campsites, structures, rvs, showers, pets, toilets, wa
   this.equestrianAccess = equestrianAccess;
   this.wheelchairAccess = wheelchairAccess;
   this.imagesquare = '../img/' + this.name + '/' +image+'300.jpg';
+  this.site = site;
   campsitesObjects.push(this);
 }
 
-new Campground('Klahanie Campground',true,false,true,false,true,true,false,false,false,true,true,true,true,true,true,true,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'klahanie');
-new Campground('Hoh Campground',true,false,true,false,true,true,false,true,false,true,true,false,true,true,true,false,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'hoh');
-new Campground('Queets Campground',true,false,false,false,true,true,false,true,false,false,true,true,true,true,true,false,true,false,true,true,true,false,false,false,true,true,true,false,false,true,false,false,false,'queets');
-new Campground('North Fork Campground',true,false,true,false,true,true,false,true,false,true,true,true,true,true,true,false,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'north');
-new Campground('Graves Creek Campground',true,false,true,false,true,true,false,true,false,true,true,false,true,true,true,false,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'graves');
-new Campground('Staircase Campground',true,false,true,false,true,true,true,true,false,true,true,true,true,true,true,false,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'staircase');
-new Campground('Belfair Main Loop Campground',true,false,true,true,true,true,false,true,false,true,true,true,true,true,true,false,false,false,false,false,false,false,false,true,true,false,true,false,true,false,false,false,false,'belfair');
-new Campground('Brown Creek Campground',true,false,true,false,true,true,true,false,false,false,true,true,true,true,true,true,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'brown');
-new Campground('Elkhorn Dispersed Camping Area',true,false,false,false,true,false,false,true,false,true,true,true,true,true,true,true,true,false,true,true,true,false,false,false,true,true,true,false,false,true,false,false,false,'elkhorn');
-new Campground('Interrorem Cabin',true,true,false,false,true,true,true,true,false,false,true,true,true,true,true,true,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'interrorem');
-new Campground('Camp Epona',true,true,true,false,true,true,true,true,true,false,true,true,true,true,true,true,true,false,false,false,true,false,true,true,true,true,true,false,true,false,false,true,false,'epona');
-new Campground('Olympic Lowlands Forest Sanctuary',true,false,false,false,false,false,true,true,false,true,true,false,false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,'lowlands');
-new Campground('1963 Highliner Bus',false,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,false,true,false,false,false,false,false,false,false,true,false,false,false,true,'bus');
-new Campground('The Cute Nest Camper',false,true,false,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,false,false,false,true,true,false,false,false,false,true,false,false,false,false,'camper');
-new Campground('Klahowya Campground',true,false,true,false,true,true,true,true,false,true,true,true,true,true,true,true,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'klahowya');
-new Campground('Sol Duc Campground',true,false,true,false,true,true,false,false,false,false,true,false,true,true,true,false,false,false,false,true,true,false,false,false,false,true,true,false,true,false,false,false,false,'solduc');
-new Campground('Ozette Campground',true,false,true,false,true,true,false,true,false,true,true,true,true,true,true,false,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'ozette');
-new Campground('Glamp Yurt',false,true,false,true,true,true,true,true,true,false,true,true,false,false,true,false,false,false,false,false,false,true,false,true,false,false,false,false,true,false,false,false,false,'yurt');
-new Campground('Mora Campground',true,false,true,false,true,true,true,true,false,true,true,false,true,true,true,false,true,false,true,true,true,false,false,true,true,true,true,false,true,false,false,false,false,'mora');
+new Campground('Klahanie Campground',true,false,true,false,true,true,false,false,false,true,true,true,true,true,true,true,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'klahanie', 'klahanie');
+new Campground('Hoh Campground',true,false,true,false,true,true,false,true,false,true,true,false,true,true,true,false,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'hoh', 'hoh');
+new Campground('Queets Campground',true,false,false,false,true,true,false,true,false,false,true,true,true,true,true,false,true,false,true,true,true,false,false,false,true,true,true,false,false,true,false,false,false,'queets', 'queets');
+new Campground('North Fork Campground',true,false,true,false,true,true,false,true,false,true,true,true,true,true,true,false,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'north', 'north');
+new Campground('Graves Creek Campground',true,false,true,false,true,true,false,true,false,true,true,false,true,true,true,false,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'graves', 'graves');
+new Campground('Staircase Campground',true,false,true,false,true,true,true,true,false,true,true,true,true,true,true,false,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'staircase', 'staircase');
+new Campground('Belfair Main Loop Campground',true,false,true,true,true,true,false,true,false,true,true,true,true,true,true,false,false,false,false,false,false,false,false,true,true,false,true,false,true,false,false,false,false,'belfair', 'belfair');
+new Campground('Brown Creek Campground',true,false,true,false,true,true,true,false,false,false,true,true,true,true,true,true,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'brown', 'brown');
+new Campground('Elkhorn Dispersed Camping Area',true,false,false,false,true,false,false,true,false,true,true,true,true,true,true,true,true,false,true,true,true,false,false,false,true,true,true,false,false,true,false,false,false,'elkhorn', 'elkhorn');
+new Campground('Interrorem Cabin',true,true,false,false,true,true,true,true,false,false,true,true,true,true,true,true,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'interrorem', 'interrorem');
+new Campground('Camp Epona',true,true,true,false,true,true,true,true,true,false,true,true,true,true,true,true,true,false,false,false,true,false,true,true,true,true,true,false,true,false,false,true,false,'epona', 'epona');
+new Campground('Olympic Lowlands Forest Sanctuary',true,false,false,false,false,false,true,true,false,true,true,false,false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,'lowlands', 'lowlands');
+new Campground('1963 Highliner Bus',false,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,false,true,false,false,false,false,false,false,false,true,false,false,false,true,'bus', 'bus');
+new Campground('The Cute Nest Camper',false,true,false,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,false,false,false,true,true,false,false,false,false,true,false,false,false,false,'camper', 'camper');
+new Campground('Klahowya Campground',true,false,true,false,true,true,true,true,false,true,true,true,true,true,true,true,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'klahowya', 'klahowya');
+new Campground('Sol Duc Campground',true,false,true,false,true,true,false,false,false,false,true,false,true,true,true,false,false,false,false,true,true,false,false,false,false,true,true,false,true,false,false,false,false,'solduc', 'solduc');
+new Campground('Ozette Campground',true,false,true,false,true,true,false,true,false,true,true,true,true,true,true,false,true,false,true,true,true,false,false,false,true,true,true,false,true,false,false,false,false,'ozette', 'ozette');
+new Campground('Glamp Yurt',false,true,false,true,true,true,true,true,true,false,true,true,false,false,true,false,false,false,false,false,false,true,false,true,false,false,false,false,true,false,false,false,false,'yurt', 'yurt');
+new Campground('Mora Campground',true,false,true,false,true,true,true,true,false,true,true,false,true,true,true,false,true,false,true,true,true,false,false,true,true,true,true,false,true,false,false,false,false,'mora', 'mora');
 
 selected = campsitesObjects.slice(0);
 
@@ -122,8 +123,8 @@ function makeList(){
     numbers.textContent = [i+1]+'/'+selected.length
     img.width = '600';
     img.height = '600';
-    // link.setAttribute('href', '../html/campgrounds/'+selected[i].name+'.html')
-    link.setAttribute('href', 'http://www.google.com')
+    link.setAttribute('href', selected[i].site+'.html')
+    // link.setAttribute('href', 'http://www.google.com')
     link.appendChild(img);
     link.appendChild(caption);
     link.appendChild(numbers)

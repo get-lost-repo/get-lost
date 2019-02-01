@@ -10,6 +10,12 @@ header {
 
 /* fixed positioned sidenav */
 
+#camp-pic {
+    height: 450px;
+    width: 450px;
+  }
+
+
 #sidenav a {
     position: fixed; /* Position them relative to the browser window */
     right: -20px; 
@@ -133,7 +139,6 @@ footer{
     padding: 10px;
     color:#725b36;
 }
-
 
 /* form and comments */
 
