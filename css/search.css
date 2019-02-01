@@ -37,6 +37,11 @@
     background-color: #152113; 
   }
 
+  #food {
+    top: 300px;
+    background-color:#ab9e7b;
+  }
+
 
 h1{
     margin:20px auto; 

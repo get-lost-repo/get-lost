@@ -44,7 +44,12 @@ header {
   background-color: #152113; 
 }
 
-/* ***********   search bar *******************/
+#food {
+  top: 300px;
+  background-color:#ab9e7b;
+}
+
+/* *********** search bar *******************/
 .search {
   background-color: #ab9e7b;
   font-size: 16px; 
