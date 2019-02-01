@@ -26,8 +26,12 @@ Comment.prototype.render = function() {
 var dataBack = JSON.parse(localStorage.getItem('belfairCommentsStringified'));
 var reversedDataBack = []
 function reverse(){
-  for(var i = 0; i<dataBack.length; i++){
-    reversedDataBack.unshift(dataBack[i])
+  if(! dataBack){
+    console.log('this might work')
+  }else{
+    for(var i = 0; i<dataBack.length; i++){
+      reversedDataBack.unshift(dataBack[i])
+    }
   }
 }
 reverse();
