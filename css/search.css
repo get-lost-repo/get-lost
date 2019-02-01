@@ -136,9 +136,9 @@ li{
     width: auto;
     padding: 16px;
     margin-top: -22px;
-    color: #ab9e7b;
+    color: #152113;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     transition: 0.36s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -152,7 +152,9 @@ li{
   
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
-    background-color: #152113;
+    font-size: 40px;
+    /* background-color: #152113; */
+
   }
 
   /* Caption text */

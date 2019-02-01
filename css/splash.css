@@ -82,7 +82,7 @@ ul.bottom-row-images {
 ul.top-row-images li {
   display: inline-block;
   height: 300px;
-  margin: 0 1em 1em 0;
+  margin: 0 20px 20px 0;
   position: relative;
   width: 300px;
 }
@@ -90,9 +90,16 @@ ul.top-row-images li {
 ul.bottom-row-images li {
   display: inline-block;
   height: 300px;
-  margin: 0 1em 1em 0;
+  margin: 0 20px 20px 0;
   position: relative;
   width: 300px;
+}
+
+ul.top-row-images li:last-child{
+  margin-right: 0px;
+}
+ul.bottom-row-images li:last-child{
+  margin-right: 0px;
 }
 
 
