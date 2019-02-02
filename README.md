@@ -14,9 +14,11 @@ As a user, I want to be able to search for specific campground amenities so that
 As a user, I want to be able to read comments from previous campers so that I will get the most up to date information on campsites that have been recently visited. 
 
 ## Team Members
-Marino Carranza - PMCarranza
-Jon Gentry - jong9000
-Chris Morton - cmorto02
+Marino Carranza - github.com/PMCarranza
+
+Jon Gentry - github.com/jong9000
+
+Chris Morton - github.com/cmorto02
 
 ## Splash Page Photo Credits
 
